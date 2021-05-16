@@ -11,6 +11,7 @@
 #' @import dplyr
 #' @import glue
 #' @import purrr
+#' @import xfun
 #'
 #' @export
 sing_day <- function(dataset, line, phrase_col){

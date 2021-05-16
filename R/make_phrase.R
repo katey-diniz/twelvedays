@@ -13,6 +13,7 @@
 #' @import glue
 #' @import dplyr
 #' @import purrr
+#' @import xfun
 #'
 #' @export
 
@@ -21,8 +22,14 @@
 make_phrase <- function(num, num_word, item, verb, adjective, location){
 
   verb <- str_replace_na(verb, "")
+  adjective <- str_replace_na(adjective, "")
+  location <- str_replace_na(location, "")
+  english <- numbers_to_words(num)
+  item <- pluralize_gift(item)
 
-  #????
+  hold <- paste(english, adjective, item, verb, location)
+
+  str_replace_all(hold, "  ", " ")
 
 
 }
