@@ -9,6 +9,7 @@
 #' @import glue
 #' @import purrr
 #' @import xfun
+#' @import english
 #'
 #' @export
 pluralize_gift <- function(gift){

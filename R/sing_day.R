@@ -12,13 +12,18 @@
 #' @import glue
 #' @import purrr
 #' @import xfun
+#' @import english
 #'
 #' @export
 sing_day <- function(dataset, line, phrase_col){
 
   phrases <- dataset %>% pull({{phrase_col}})
 
-  #????
+  hold <- map(phrases[line:2], glue)
 
+  saying <- glue("On the {ordinal(line)} day of Christmas,
+        my true love gave to me, ") %>%
+    cat(paste("\n", str_trim(hold), ",", sep="")) %>%
+    cat(paste("\n", "and ", phrases[1], ".", sep = ""))
 
 }

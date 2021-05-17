@@ -14,6 +14,7 @@
 #' @import dplyr
 #' @import purrr
 #' @import xfun
+#' @import english
 #'
 #' @export
 
