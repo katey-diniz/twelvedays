@@ -16,7 +16,8 @@ Imports:
     stringr,
     magrittr,
     purrr,
-    xfun
+    xfun,
+    english
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Suggests: 
