@@ -25,7 +25,9 @@ make_phrase <- function(num, num_word, item, verb, adjective, location){
   adjective <- str_replace_na(adjective, "")
   location <- str_replace_na(location, "")
   english <- numbers_to_words(num)
-  item <- pluralize_gift(item)
+  item <- case_when(
+    num != 1 ~ pluralize_gift(item),
+    num == 1 ~ item)
 
   hold <- case_when(
     num != 1 ~ paste(english, adjective, item, verb, location),
